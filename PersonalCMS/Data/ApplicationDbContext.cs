@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PersonalCMS.Models;
 
 namespace PersonalCMS.Data
 {
@@ -12,5 +13,7 @@ namespace PersonalCMS.Data
             : base(options)
         {
         }
+
+        public DbSet<Page> Pages { get; set; }
     }
 }

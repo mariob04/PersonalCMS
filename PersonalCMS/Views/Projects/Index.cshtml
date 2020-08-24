@@ -1,7 +1,6 @@
-﻿
+﻿@model Page
 @{
     ViewData["Title"] = "Projects";
 }
 
-<h1>Index</h1>
-
+@Html.Raw(Model?.Content)

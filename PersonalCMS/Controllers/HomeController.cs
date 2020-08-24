@@ -5,27 +5,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PersonalCMS.Data;
 using PersonalCMS.Models;
 
 namespace PersonalCMS.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _dbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext dbContext)
         {
-            _logger = logger;
+            _dbContext = dbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var page = _dbContext.Pages.FirstOrDefault(x => x.Title == "Home");
+            return View(page);
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            var page = _dbContext.Pages.FirstOrDefault(x => x.Title == "PrivacyPolicy");
+            return View(page);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
