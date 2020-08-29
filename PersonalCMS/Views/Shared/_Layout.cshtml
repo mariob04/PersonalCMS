@@ -16,6 +16,11 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/animations.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -54,13 +59,13 @@
         <main role="main" class="pb-3">
             @RenderBody()
 
-            
+
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - MyWebsite - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - Mario Bilić - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 
@@ -83,6 +88,7 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/app.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
